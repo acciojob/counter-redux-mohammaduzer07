@@ -6,7 +6,7 @@ import { decrement, increment } from "../slice/slice";
 
 const Home = () => {
 
-  const count = useSelector((state) => state.counter.value)
+  const {count} = useSelector((state) => state.counter.value)
   const dispatch = useDispatch();
 
   const handleIncrement = () =>{
@@ -20,12 +20,8 @@ const Home = () => {
         {/* Do not remove the main div */}
 
         <h1>{count}</h1>
-        <div>
           <button onClick={handleIncrement}>increment</button>
-        </div>
-        <div>
           <button onClick={handleDecrement}>decrement</button>
-        </div>
     </div>
   )
 }
