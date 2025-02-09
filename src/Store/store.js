@@ -3,7 +3,7 @@ import counterReducer from "../slice/slice"
 
 const store = configureStore({
     reducer : {
-        count : counterReducer,
+        counter: counterReducer,
     },
 })
 export default store
